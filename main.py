@@ -75,7 +75,7 @@ if __name__ == "__main__":
 
     # Playing Music
     elif "play music" in query:
-      musicDir = "C:\\Users\\nitin\\OneDrive\\Music" # Path to Music Directory
+      musicDir = "" # Path to Music Directory
       songs = os.listdir(musicDir) # List All Songs in Directory
       
       random_index = random.randint(0, len(songs) - 1) # Generate Random Index
@@ -86,3 +86,16 @@ if __name__ == "__main__":
     elif "the time" in query:
       strTime = datetime.datetime.now().strftime("%H:%M:%S") # Get Current Time
       print (strTime) # Print Current Time
+
+    # Opening Apps
+    elif "open code" in query: # Visual Studio Code
+      codePath = "" # Path to VS Code
+      os.startfile(codePath) # Start VS Code
+
+    elif "open spotify" in query: # Spotify
+      spotifyPath = "" # Path to Spotify
+      os.startfile(spotifyPath) # Start Spotify
+
+    elif "open comet" in query:
+      cometPath = "" # Path to Comet
+      os.startfile(cometPath) # Start Comet
